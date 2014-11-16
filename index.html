@@ -1,1 +1,85 @@
-<h1>Mahmoud Saada</h1>
+<html>
+	<head>
+		<style>
+			.highlight {
+				background-color: black;
+			}
+		</style>
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/markdown.js/0.6.0-beta1/markdown.min.js"></script>
+		<script src="./app.js"></script>
+	</head>
+	<body>
+		<div ng-app="myApp" ng-controller="MyController">
+			<link rel="stylesheet" href="http://bootswatch.com/{{currentTheme}}/bootstrap.min.css">
+			
+			<style>
+				.orange {
+					background-color: #B65E43;
+				}
+				.pink {
+					background-color: #9A3C80;
+				}
+				.blue {
+					background-color: #3C5A9A;
+				}
+				.lightgreen {
+					background-color: #3B977E;
+				}
+				.darkgreen {
+					background-color: #4F6B6D;
+				}
+				.navy {
+					background-color: #455C68;
+				}
+				.brown {
+					background-color: #87635A;
+				}
+				.red {
+					background-color: #A4433D;
+				}
+
+				.right-align {
+					text-align: right;
+				}
+
+				.jumbotron{
+					margin:0;
+					color: white;
+				}
+				h2 {
+					color: #D1D1D1;
+				}
+			</style>
+			Themes:
+			<span ng-repeat="theme in themes">
+				<a href="#" ng-class="{highlight: theme == currentTheme }" ng-click="setTheme(theme)">{{theme}}</a>
+				|
+			</span>
+			<div class="jumbotron orange">
+				<div class="container">
+					<h1>Mahmoud Saada</h1>
+					<h2>A zealous software engineer</h2>
+				</div>
+			</div>
+			<div class="jumbotron brown right-align">
+				<div class="container">
+					<h1>I help people by solving big problems</h1>
+					<h2>Go2MyCar</h2>
+					<h2>Thoth</h2>
+					<h2>Staffingnation</h2>
+				</div>
+			</div>
+			<div class="jumbotron darkgreen">
+				<div class="container">
+					<h1>I'm an Open Source Enthusiast</h1>
+				</div>
+			</div>
+			
+			
+		</div>
+	</body>
+</html>
+
