@@ -1,0 +1,43 @@
+.jumbotron{
+	margin:0;
+	color: white;
+}
+h2 {
+	color: #D1D1D1;
+}
+.highlight {
+	background-color: black;
+}
+.right-align {
+	text-align: right;
+}
+.orange {
+	background-color: #B65E43;
+}
+.pink {
+	background-color: #9A3C80;
+}
+.blue {
+	background-color: #3C5A9A;
+}
+.lightgreen {
+	background-color: #3B977E;
+}
+.darkgreen {
+	background-color: #4F6B6D;
+}
+.navy {
+	background-color: #455C68;
+}
+.brown {
+	background-color: #87635A;
+}
+.red {
+	background-color: #A4433D;
+}
+.lightblue {
+	background-color: #66C0CC;
+}
+.lightviolet {
+	background-color: #E0E3F5;
+}
