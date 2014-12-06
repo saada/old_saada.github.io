@@ -27,7 +27,6 @@ angular.module('myApp', [])
 	var responsePromise = $http.get('https://api.github.com/users/saada/starred');
 
     responsePromise.success(function(data) {
-		console.log(data);
         $scope.recentlyStarredRepos = data;
     });
 }]);
