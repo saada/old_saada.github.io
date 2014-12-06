@@ -1,5 +1,6 @@
 <html>
 	<head>
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
 		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
@@ -9,21 +10,22 @@
 		<div ng-app="myApp" ng-controller="MyController">
 			<link rel="stylesheet" ng-href="http://bootswatch.com/{{currentTheme}}/bootstrap.min.css">	
 			<link rel="stylesheet" href="./style.css">
-			Themes:
-			<span ng-repeat="theme in themes">
-				<a href="#" ng-class="{highlight: theme == currentTheme }" ng-click="setTheme(theme)">{{theme}}</a>
-				|
-			</span>
 			<div class="jumbotron orange">
 				<div class="container">
-					<h1>Mahmoud Saada</h1>
-					<h2>A zealous software engineer</h2>
-					<img src="https://avatars0.githubusercontent.com/u/1087987?v=3&s=460" alt="avatar" class="img-circle">
+					<div class="row"><div class="col-md-5">
+							<img src="https://avatars0.githubusercontent.com/u/1087987?v=3&s=460" alt="avatar" class="img-circle focus">
+						</div>
+						<div class="col-md-7 title">
+							<h1>Mahmoud Saada</h1>
+							<h2>I'm zealous full-stack software engineer</h2>
+						</div>
+						
+					</div>
 				</div>
 			</div>
 			<div class="jumbotron brown right-align">
 				<div class="container">
-					<h1>I automate things and write code to solve big problems</h1>
+					<h1>I solve <span style="color: #e9967a">big problems</span> by writing <span style="color:#ffe4c4">code</span> and <span style="color:#ABFFB0">automating</span> all the things</h1>
 					<h2><a href="http://go2mycar.com">Go2MyCar</a></h2>
 					<h2><a href="https://www.mobicloud.asu.edu/">Thoth</a></h2>
 					<h2><a href="https://staffingnation.com">Staffingnation</a></h2>
@@ -33,9 +35,16 @@
 				<div class="container">
 					<h1>I'm an Open Source Enthusiast</h1>
 					<h2>Here are some projects that I like</h2>
-					<a ng-repeat="repo in recentlyStarredRepos" ng-href="{{repo.html_url}}">{{repo.name}}<br/></a>
+					<div class="opensource">
+						<a ng-repeat="repo in recentlyStarredRepos" ng-href="{{repo.html_url}}">{{repo.name}}<br/></a>
+					</div>
 				</div>
 			</div>
+			Themes:
+			<span ng-repeat="theme in themes">
+				<a href="#" ng-class="{highlight: theme == currentTheme }" ng-click="setTheme(theme)">{{theme}}</a>
+				|
+			</span>
 		</div>
 	</body>
 </html>

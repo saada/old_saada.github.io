@@ -18,7 +18,7 @@ angular.module('myApp', [])
         'united',
         'yeti'
     ];
-    $scope.currentTheme = 'superhero';	//default theme
+    $scope.currentTheme = 'journal';	//default theme
 
     $scope.setTheme = function(theme){
     	$scope.currentTheme = theme;
@@ -31,3 +31,18 @@ angular.module('myApp', [])
         $scope.recentlyStarredRepos = data;
     });
 }]);
+
+
+// animations
+function animate(selector, animation) {
+    $(selector)
+        .addClass('animated ' + animation)
+        .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+            $(this).removeClass('animated ' + animation); 
+        });
+}
+
+$(function init(){
+    animate('.jumbotron', 'fadeIn');
+    animate('.jumbotron *', 'zoomIn');
+});
