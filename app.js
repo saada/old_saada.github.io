@@ -24,9 +24,7 @@ angular.module('myApp', [])
     	$scope.currentTheme = theme;
     };
 
-	var responsePromise = $http.get('https://api.github.com/users/saada/starred');
-
-    responsePromise.success(function(data) {
+    $http.get('https://api.github.com/users/saada/starred').success(function(data) {
         $scope.recentlyStarredRepos = data;
     });
 }]);

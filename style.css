@@ -29,11 +29,6 @@
     column-gap: 0px;
 }
 div, h1, h2, a {
-  -webkit-transition: all .5s ease;
-     -moz-transition: all .5s ease;
-       -o-transition: all .5s ease;
-      -ms-transition: all .5s ease;
-          transition: all .5s ease;
 }
 .focus {
   	border: 0px solid #000;
@@ -42,6 +37,11 @@ div, h1, h2, a {
 	-ms-filter: grayscale(0%);
 	-o-filter: grayscale(0%);
 	filter: grayscale(0%);
+  -webkit-transition: all .5s ease;
+     -moz-transition: all .5s ease;
+       -o-transition: all .5s ease;
+      -ms-transition: all .5s ease;
+          transition: all .5s ease;
 }
  
 .focus:hover {
