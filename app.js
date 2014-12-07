@@ -18,7 +18,7 @@ angular.module('myApp', [])
         'united',
         'yeti'
     ];
-    $scope.currentTheme = 'journal';	//default theme
+    $scope.currentTheme = 'cerulean';	//default theme
 
     $scope.setTheme = function(theme){
     	$scope.currentTheme = theme;
